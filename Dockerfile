@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:latest
 
 ENV TZ=Asia/Jakarta
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y lsb-release \
       zlib1g-dev libicu-dev libbz2-dev libmagickwand-dev libjpeg-dev libvpx-dev libxpm-dev libpng-dev libfreetype6-dev libc-client-dev \
       libkrb5-dev libxml2-dev libxslt1.1 libxslt1-dev locales locales-all \
       ffmpeg html2text ghostscript pngcrush jpegoptim exiftool poppler-utils git wget nginx curl supervisor \
-      php-intl php-mbstring php-dom php-opcache php-mysqli php-bcmath php-bz2 php-gd php-curl php-soap php-xmlrpc php-pdo php-fileinfo php-exif php-zip php-xdebug php-redis php-imagick php-imap php-fpm \
+      php-intl php-mbstring php-dom php-opcache php-mysqli php-bcmath php-bz2 php-gd php-curl php-soap php-xmlrpc php-pdo php-fileinfo php-exif php-zip php-redis php-imagick php-imap php-fpm \
     \
     && cd ~ \
     \

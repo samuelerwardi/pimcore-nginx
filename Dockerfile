@@ -31,8 +31,5 @@ RUN mkdir /run/php
 RUN usermod -u 1000 www-data
 RUN usermod -G staff www-data
 
-ENV APACHE_DOCUMENT_ROOT /var/www/html
-ENV PHP_DEBUG 1
-
 EXPOSE 80 443 9000
 CMD ["/bin/bash","/start.sh"]

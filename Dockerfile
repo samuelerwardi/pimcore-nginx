@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 ENV TZ=Asia/Jakarta
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-RUN apt-get update && apt-get install -y lsb-release \
+RUN apt-get update && apt-get install -y lsb-release vim \
     && apt-get update && apt-get install -y --no-install-recommends \
       autoconf automake libtool nasm make pkg-config libz-dev build-essential g++ ca-certificates \
       zlib1g-dev libicu-dev libbz2-dev libmagickwand-dev libjpeg-dev libvpx-dev libxpm-dev libpng-dev libfreetype6-dev libc-client-dev \
